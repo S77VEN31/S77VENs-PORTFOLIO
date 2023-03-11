@@ -37,19 +37,21 @@ const HomeNavBar = () => {
           className='testxd'
         />
         <ol className='navbar-routes-container'>
-          <li className='Inter-Black-H2 route-container'>
+          <li className='Inter-Black-H2 route-container text-hover glitch-effect'>
+            <span aria-hidden="true">Home</span>
             Home
+            <span aria-hidden="true">Home</span>
           </li>
-          <li className='Inter-Black-H2 route-container'>
+          <li className='Inter-Black-H2 route-container text-hover glitch-effect'>
             About
           </li>
-          <li className='Inter-Black-H2 route-container'>
+          <li className='Inter-Black-H2 route-container text-hover glitch-effect'>
             Contact
           </li>
-          <li className='Inter-Black-H2 route-container'>
+          <li className='Inter-Black-H2 route-container text-hover glitch-effect'>
             Testimonials
           </li>
-          <li className='Inter-Black-H2 route-container'>
+          <li className='Inter-Black-H2 route-container text-hover glitch-effect'>
             Updates
           </li>
         </ol>
