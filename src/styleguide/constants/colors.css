@@ -1,0 +1,10 @@
+:root {
+    --pureBlack: #000000;
+    --black: #1A1A1A;
+    --white: #FFFFFF;
+    --orangeGradient: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(86,10,149,1) 100%);
+    --transparentBlack: rgba(28, 28, 28, 0.5);
+    --g: #777777;
+    --b: linear-gradient(to top, #000000, #777777);
+} 
+

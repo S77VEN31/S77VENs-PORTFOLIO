@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.app-main-container {
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    background: var(--b);
+}
+@font-face {
+    font-family: 'Inter-Black';
+    src: local('Inter-Black'), url(./assets/fonts/inter/Inter-Black.ttf) format('truetype');
+}
