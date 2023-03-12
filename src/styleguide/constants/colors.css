@@ -1,10 +1,12 @@
 :root {
-    --pureBlack: #000000;
-    --black: #1A1A1A;
-    --white: #FFFFFF;
-    --orangeGradient: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(86,10,149,1) 100%);
-    --transparentBlack: rgba(28, 28, 28, 0.5);
-    --g: #777777;
-    --b: linear-gradient(to top, #000000, #777777);
+    --primary-color: #0f0;
+    --secondary-color: #090;
+    --background-color: #1B1B1B;
+    --text-color: #FFFFFF;
+    --accent-color: #FF4E50;
+    --error-color: #FFD6BA;
+    --success-color: #4CAF50;
+    --warning-color: #FFC107;
+    --info-color: #2196F3;
 } 
 
