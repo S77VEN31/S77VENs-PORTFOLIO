@@ -29,6 +29,13 @@ const HomeNavBar = () => {
 
     prevScrollPos = currentScrollPos
   }
+  setTimeout(() => {
+    const displayEffect = document.querySelectorAll('.navbar-item')
+    for (let i = 0; i < displayEffect.length; i++) {
+      displayEffect[i].classList.remove('display-effect')
+      displayEffect[i].classList.add('glitch-effect')
+    }
+  }, 1000)
 
   setInterval(() => {
     const elements = document.querySelectorAll('.glitch-effect')
@@ -52,23 +59,23 @@ const HomeNavBar = () => {
           src={TitleDescriptionLogo}
           className='logo-shake-effect'
         />
-        <ol className='navbar-routes-container'>
-          <li className='Inter-Black-H2 route-container text-hover glitch-effect paused'>
+        <nav className='navbar-routes-container'>
+          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
             Home
           </li>
-          <li className='Inter-Black-H2 route-container text-hover glitch-effect paused'>
+          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
             About
           </li>
-          <li className='Inter-Black-H2 route-container text-hover glitch-effect paused'>
+          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
             Contact
           </li>
-          <li className='Inter-Black-H2 route-container text-hover glitch-effect paused'>
+          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
             Testimonials
           </li>
-          <li className='Inter-Black-H2 route-container text-hover glitch-effect paused'>
+          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
             Updates
           </li>
-        </ol>
+        </nav>
       </header>
     </div>
   )

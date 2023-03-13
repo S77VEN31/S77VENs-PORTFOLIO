@@ -37,11 +37,25 @@
     flex-wrap: wrap;
 }
 
-.route-container {
+@keyframes drop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-item {
     display: flex;
     flex: 1;
     justify-content: center;
-
+}
+.navbar-item.display-effect {
+  transform: translateY(-100%);
+  animation: drop-in 1s ease forwards !important;
 }
 
 .text-hover:hover {
