@@ -60,34 +60,34 @@
 @keyframes glitch {
     0% {
         text-shadow:
-            -0.05em 0 0 rgba(0, 255, 85, 0.75),
-            0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
-            -0.025em -0.05em 0 rgba(0, 255, 255, 0.75);
+            -0.1em 0 0 rgba(0, 255, 85, 0.75),
+            0.025em 0.1em 0 rgba(255, 0, 0, 0.75),
+            -0.025em -0.1em 0 rgba(0, 255, 255, 0.75);
     }
     15% {
         text-shadow:
-            0.05em -0.025em 0 rgba(0, 255, 85, 0.75),
-            -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-            0.025em 0.05em 0 rgba(0, 255, 255, 0.75);
+            0.1em -0.025em 0 rgba(0, 255, 85, 0.75),
+            -0.1em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.1em 0 rgba(0, 255, 255, 0.75);
     }
     50% {
         text-shadow:
-            -0.05em 0 0 rgba(0, 255, 85, 0.75),
-            0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            -0.1em 0 0 rgba(0, 255, 85, 0.75),
+            0.025em 0.1em 0 rgba(255, 0, 0, 0.75),
             0.025em 0.025em 0 rgba(0, 255, 255, 0.75);
     }
     100% {
         text-shadow:
-            0 0.05em 0 rgba(0, 255, 85, 0.75),
-            -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
-            -0.05em -0.025em 0 rgba(0, 255, 255, 0.75);
+            0 0.1em 0 rgba(0, 255, 85, 0.75),
+            -0.1em -0.025em 0 rgba(255, 0, 0, 0.75),
+            -0.1em -0.025em 0 rgba(0, 255, 255, 0.75);
     }
 }
 .glitch-effect:hover {
     text-shadow:
-        0.05em 0 0 rgba(0, 255, 85, 0.75),
-        -0.025em -0.05em 0 rgba(255, 0, 0, 0.75),
-        0.025em 0.05em 0 rgba(0, 255, 255, 0.75);
+        0.1em 0 0 rgba(0, 255, 85, 0.75),
+        -0.025em -0.1em 0 rgba(255, 0, 0, 0.75),
+        0.025em 0.1em 0 rgba(0, 255, 255, 0.75);
     animation: glitch 750ms infinite !important;
 }
 .glitch-effect {
@@ -134,4 +134,6 @@
    
 }
 
-
+.logo-shake-effect:hover {
+    animation: shake 750ms infinite;
+}

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import TitleDescriptionLogo from '../../../../assets/images/png/logo.png'
+import { signal, useComputed } from '@preact/signals-react'
 import './HomeNavBar.css'
+const counter = signal(0)
 
 const HomeNavBar = () => {
   useEffect(() => {
@@ -28,32 +30,28 @@ const HomeNavBar = () => {
     prevScrollPos = currentScrollPos
   }
 
-
   setInterval(() => {
-    var elements = document.querySelectorAll(".glitch-effect");
-    for (var i = 0; i < elements.length; i++) {
-      elements[i].classList.remove('paused');
-      elements[i].style.animationPlayState = "running";
+    const elements = document.querySelectorAll('.glitch-effect')
+    for (let i = 0; i < elements.length; i++) {
+      elements[i].classList.remove('paused')
+      elements[i].style.animationPlayState = 'running'
     }
-    setTimeout (() => {
-      for (var i = 0; i < elements.length; i++) { 
-        elements[i].style.animationPlayState = "paused";
-        elements[i].classList.add('paused');
+    setTimeout(() => {
+      for (let i = 0; i < elements.length; i++) {
+        elements[i].style.animationPlayState = 'paused'
+        elements[i].classList.add('paused')
       }
-    }, 1000);
-  }, 6000);
-  
-  
+    }, 1000)
+  }, 6000)
+  const double = useComputed(() => counter.value * 2)
   return (
     <div>
       <header className='navbar-main-container'>
-        <div className='my-image'>
-          <img
-            style={{ maxWidth: 100 }}
-            src={TitleDescriptionLogo}
-            className='shake'
-          />
-        </div>
+        <img
+          style={{ maxWidth: 100 }}
+          src={TitleDescriptionLogo}
+          className='logo-shake-effect'
+        />
         <ol className='navbar-routes-container'>
           <li className='Inter-Black-H2 route-container text-hover glitch-effect paused'>
             Home
