@@ -10,12 +10,15 @@
     top: 0;
     left: 0;
     right: 0;
+    max-height: 80px;
+    background-color: var(--background-color);
     transition: top 0.6s ease-in-out;
 }
 
 .navbar-main-container.hide {
     top: -150px;
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
 }
 
 .navbar-main-container:hover {

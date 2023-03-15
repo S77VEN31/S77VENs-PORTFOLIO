@@ -50,7 +50,15 @@ const HomeNavBar = () => {
       }
     }, 1000)
   }, 6000)
+  /* <div style={{ width: 100, height: 100, backgroundColor: 'red' }}>
+          {double}
+        </div>
+        <div style={{ width: 100, height: 100, backgroundColor: 'red' }}>
+          {plus}
+        </div>
+        <button onClick={() => { counter.value = counter.value + 1 }} />
   const double = useComputed(() => counter.value * 2)
+  const plus = counter.value */
   return (
     <div>
       <header className='navbar-main-container'>
