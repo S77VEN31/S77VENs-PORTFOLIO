@@ -1,8 +1,12 @@
+// React
 import React from 'react'
 import ReactDOM from 'react-dom'
+// Components
 import HomeNavBar from './styleguide/components/navbars/HomeNavBar/HomeNavBar'
-import './App.css'
 import CommentInformationCard from './styleguide/components/cards/CommentInformationCard/CommentInformationCard'
+// Styles
+import './App.css'
+
 const App = () => {
   document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.app-main-content')
@@ -35,7 +39,7 @@ const App = () => {
       <HomeNavBar />
       <main className='app-main-content'>
         {
-          Array.from({ length: 1000 }, (_, index) => (
+          Array.from({ length: 5 }, (_, index) => (
             <CommentInformationCard key={index} comment={index} />
           ))
         }
@@ -43,5 +47,4 @@ const App = () => {
     </div>
   )
 }
-
 ReactDOM.render(<App />, document.getElementById('root'))

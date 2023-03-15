@@ -23,6 +23,13 @@
 .navbar-main-container.box-shadow-none {
   box-shadow: none;
 }
+
+
+.navbar-main-container:hover {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+  transition: background-color 3s ease, box-shadow 3s ease;
+  background-color: var(--background-color); 
+}
 .navbar-main-container.hide {
   top: -150px;
   transition: top 0.6s ease-in-out;
@@ -31,13 +38,6 @@
   transition: top 0.3s ease-in-out;
   top: 0px;
 }
-
-.navbar-main-container:hover {
-  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
-  transition: background-color 3s ease, box-shadow 3s ease;
-  background-color: var(--background-color); 
-}
-
 
 .navbar-main-container .navbar-routes-container {
   display: flex;

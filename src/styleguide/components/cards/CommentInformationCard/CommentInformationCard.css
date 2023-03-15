@@ -1,6 +1,7 @@
 .main-container-xd {
   background-color: transparent;
-  width: 100px;
-  height: 100px;
-  border: 1px solid blue;
+  width: 600px;
+  height: 400px;
+  border: 1px solid cyan;
+  border-radius: 16px;
 }

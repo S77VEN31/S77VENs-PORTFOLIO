@@ -1,5 +1,8 @@
+// React
 import React from 'react'
+// Icons
 import TitleDescriptionLogo from '../../../../assets/images/png/logo.png'
+// Styles
 import './HomeNavBar.css'
 
 const HomeNavBar = () => {
@@ -25,7 +28,6 @@ const HomeNavBar = () => {
     }, 1000)
   }, 6000)
   return (
-
     <header className='navbar-main-container'>
       <img
         style={{ maxWidth: 100 }}
