@@ -1,34 +1,8 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import TitleDescriptionLogo from '../../../../assets/images/png/logo.png'
-import { signal, useComputed } from '@preact/signals-react'
 import './HomeNavBar.css'
-const counter = signal(0)
 
 const HomeNavBar = () => {
-  useEffect(() => {
-    const header = document.querySelector('header')
-    header.addEventListener('wheel', (e) => {
-      e.preventDefault()
-    })
-    return () => {
-      header.removeEventListener('wheel')
-    }
-  }, [])
-
-  let prevScrollPos = window.pageYOffset
-
-  window.onscroll = () => {
-    const currentScrollPos = window.pageYOffset
-    const mainHeader = document.querySelector('.navbar-main-container')
-
-    if (prevScrollPos > currentScrollPos) {
-      mainHeader.classList.remove('hide')
-    } else {
-      mainHeader.classList.add('hide')
-    }
-
-    prevScrollPos = currentScrollPos
-  }
   setTimeout(() => {
     const displayEffect = document.querySelectorAll('.navbar-item')
     for (let i = 0; i < displayEffect.length; i++) {
@@ -50,42 +24,32 @@ const HomeNavBar = () => {
       }
     }, 1000)
   }, 6000)
-  /* <div style={{ width: 100, height: 100, backgroundColor: 'red' }}>
-          {double}
-        </div>
-        <div style={{ width: 100, height: 100, backgroundColor: 'red' }}>
-          {plus}
-        </div>
-        <button onClick={() => { counter.value = counter.value + 1 }} />
-  const double = useComputed(() => counter.value * 2)
-  const plus = counter.value */
   return (
-    <div>
-      <header className='navbar-main-container'>
-        <img
-          style={{ maxWidth: 100 }}
-          src={TitleDescriptionLogo}
-          className='logo-shake-effect'
-        />
-        <nav className='navbar-routes-container'>
-          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
-            Home
-          </li>
-          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
-            About
-          </li>
-          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
-            Contact
-          </li>
-          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
-            Testimonials
-          </li>
-          <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
-            Updates
-          </li>
-        </nav>
-      </header>
-    </div>
+
+    <header className='navbar-main-container'>
+      <img
+        style={{ maxWidth: 100 }}
+        src={TitleDescriptionLogo}
+        className='logo-shake-effect'
+      />
+      <nav className='navbar-routes-container'>
+        <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
+          Home
+        </li>
+        <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
+          About
+        </li>
+        <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
+          Contact
+        </li>
+        <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
+          Testimonials
+        </li>
+        <li className='Inter-Black-H2 navbar-item text-hover paused display-effect'>
+          Updates
+        </li>
+      </nav>
+    </header>
   )
 }
 export default HomeNavBar

@@ -1,43 +1,57 @@
-.navbar-main-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden;
-    gap: 40px;
-    padding: 10px 20px 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-height: 80px;
-    background-color: var(--background-color);
-    transition: top 0.6s ease-in-out;
-}
 
+.navbar-main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  gap: 40px;
+  padding: 10px 20px 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-height: 80px;
+  backdrop-filter: blur(10px);
+  z-index: 11;
+  background-color: var(--background-color-with-opacity);
+}
+.navbar-main-container.box-shadow {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 1s ease
+}
+.navbar-main-container.box-shadow-none {
+  box-shadow: none;
+}
 .navbar-main-container.hide {
-    top: -150px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
-    opacity: 0.9;
+  top: -150px;
+  transition: top 0.6s ease-in-out;
+}
+.navbar-main-container.show {
+  transition: top 0.3s ease-in-out;
+  top: 0px;
 }
 
 .navbar-main-container:hover {
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
-    transition: box-shadow 0.5s ease;
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.8);
+  transition: background-color 3s ease, box-shadow 3s ease;
+  background-color: var(--background-color); 
 }
 
+
 .navbar-main-container .navbar-routes-container {
-    display: flex;
-    row-gap: 12px;
-    column-gap: 32px;
-    flex-direction: row;
-    flex: 1;
-    justify-content: space-between;
-    justify-items: center;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  row-gap: 12px;
+  column-gap: 32px;
+  flex-direction: row;
+  flex: 1;
+  filter: unset;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-wrap: wrap;
 }
 
 @keyframes drop-in {
@@ -45,6 +59,7 @@
     opacity: 0;
     transform: translateY(-100%);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -52,105 +67,122 @@
 }
 
 .navbar-item {
-    display: flex;
-    flex: 1;
-    justify-content: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
 }
+
 .navbar-item.display-effect {
   transform: translateY(-100%);
   animation: drop-in 1s ease forwards !important;
 }
 
 .text-hover:hover {
-    transform: translateY(-2px);
-    transition: all 0.2s ease-in-out;
-    transition-delay: 100ms;
-    color: var(--primary-color);
+  transform: translateY(-2px);
+  transition: all 0.2s ease-in-out;
+  transition-delay: 100ms;
+  color: var(--primary-color);
 }
 
 .text-hover:not(hover) {
-    transition: all 0.2s ease-in-out;
-    transition-delay: 100ms;
-    color: var(--text-color);
+  transition: all 0.2s ease-in-out;
+  transition-delay: 100ms;
+  color: var(--text-color);
 }
 
 @keyframes glitch {
-    0% {
-        text-shadow:
-            -0.1em 0 0 rgba(0, 255, 85, 0.75),
-            0.025em 0.1em 0 rgba(255, 0, 0, 0.75),
-            -0.025em -0.1em 0 rgba(0, 255, 255, 0.75);
-    }
-    15% {
-        text-shadow:
-            0.1em -0.025em 0 rgba(0, 255, 85, 0.75),
-            -0.1em -0.025em 0 rgba(255, 0, 0, 0.75),
-            0.025em 0.1em 0 rgba(0, 255, 255, 0.75);
-    }
-    50% {
-        text-shadow:
-            -0.1em 0 0 rgba(0, 255, 85, 0.75),
-            0.025em 0.1em 0 rgba(255, 0, 0, 0.75),
-            0.025em 0.025em 0 rgba(0, 255, 255, 0.75);
-    }
-    100% {
-        text-shadow:
-            0 0.1em 0 rgba(0, 255, 85, 0.75),
-            -0.1em -0.025em 0 rgba(255, 0, 0, 0.75),
-            -0.1em -0.025em 0 rgba(0, 255, 255, 0.75);
-    }
-}
-.glitch-effect:hover {
+  0% {
     text-shadow:
-        0.1em 0 0 rgba(0, 255, 85, 0.75),
-        -0.025em -0.1em 0 rgba(255, 0, 0, 0.75),
-        0.025em 0.1em 0 rgba(0, 255, 255, 0.75);
-    animation: glitch 750ms infinite !important;
+      -0.1em 0 0 rgba(0, 255, 85, 0.75),
+      0.025em 0.1em 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.1em 0 rgba(0, 255, 255, 0.75);
+  }
+
+  15% {
+    text-shadow:
+      0.1em -0.025em 0 rgba(0, 255, 85, 0.75),
+      -0.1em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.1em 0 rgba(0, 255, 255, 0.75);
+  }
+
+  50% {
+    text-shadow:
+      -0.1em 0 0 rgba(0, 255, 85, 0.75),
+      0.025em 0.1em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 255, 0.75);
+  }
+
+  100% {
+    text-shadow:
+      0 0.1em 0 rgba(0, 255, 85, 0.75),
+      -0.1em -0.025em 0 rgba(255, 0, 0, 0.75),
+      -0.1em -0.025em 0 rgba(0, 255, 255, 0.75);
+  }
 }
+
+.glitch-effect:hover {
+  text-shadow:
+    0.1em 0 0 rgba(0, 255, 85, 0.75),
+    -0.025em -0.1em 0 rgba(255, 0, 0, 0.75),
+    0.025em 0.1em 0 rgba(0, 255, 255, 0.75);
+  animation: glitch 750ms infinite !important;
+}
+
 .glitch-effect {
-    animation: glitch 750ms infinite paused, shake 750ms infinite;
+  animation: glitch 750ms infinite paused, shake 750ms infinite;
 }
+
 .glitch-effect.paused {
-    animation: none;
+  animation: none;
 }
 
 @keyframes shake {
-    0% {
-        transform: translate(0);
-      }
-      10% {
-        transform: translate(-2px, 0);
-      }
-      20% {
-        transform: translate(2px, 0);
-      }
-      30% {
-        transform: translate(-2px, 0);
-      }
-      40% {
-        transform: translate(2px, 0);
-      }
-      50% {
-        transform: translate(-2px, 0);
-      }
-      60% {
-        transform: translate(2px, 0);
-      }
-      70% {
-        transform: translate(-2px, 0);
-      }
-      80% {
-        transform: translate(2px, 0);
-      }
-      90% {
-        transform: translate(-2px, 0);
-      }
-      100% {
-        transform: translate(0);
-      }
-   
+  0% {
+    transform: translate(0);
+  }
+
+  10% {
+    transform: translate(-2px, 0);
+  }
+
+  20% {
+    transform: translate(2px, 0);
+  }
+
+  30% {
+    transform: translate(-2px, 0);
+  }
+
+  40% {
+    transform: translate(2px, 0);
+  }
+
+  50% {
+    transform: translate(-2px, 0);
+  }
+
+  60% {
+    transform: translate(2px, 0);
+  }
+
+  70% {
+    transform: translate(-2px, 0);
+  }
+
+  80% {
+    transform: translate(2px, 0);
+  }
+
+  90% {
+    transform: translate(-2px, 0);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+
 }
 
 .logo-shake-effect:hover {
-    animation: shake 750ms infinite;
+  animation: shake 750ms infinite;
 }
